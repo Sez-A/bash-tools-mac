@@ -1,50 +1,79 @@
-# bash-tools-mac
+# macOS-shell-kit
 
-A collection of simple Bash scripts for macOS that provide useful system notifications.
+A small collection of lightweight Bash scripts for macOS to boost your productivity and system awareness — all from the terminal.
 
-## 📜 Scripts
-
-### 🔋 Battery Monitor (`battery_alert.sh`)
-Monitors your MacBook's battery and notifies you when it drops to **30%**.
-
-#### ❓ Why this script?  
-I know macOS has a built-in low battery notification, but I created this script because:  
-1. My **Mac's notification system broke**, and it stopped warning me about low battery. I couldn't fix the issue.  
-2. My **battery is old**, and if it reaches **20%**, it sometimes **shuts down immediately** before macOS can warn me. Restarting takes a long time, so I needed a more flexible solution.  
-
-#### ✅ Usage:
-```bash
-chmod +x battery_alert.sh
-./battery_alert.sh
-```
-- Runs in the background and checks the battery level every minute.  
-- Shows a **macOS popup notification** when the battery reaches **30%**.  
-- You can change the threshold by modifying the script.  
+> 📁 Scripts are located in the `scripts/` folder.
 
 ---
 
-### ⏳ Countdown Timer (`break_timer.sh`)
-A terminal-based countdown timer with a **macOS notification** when time is up.
+## 📜 Available Scripts
 
-#### ✅ Usage:
+### 🔋 Battery Alert – `battery_alert.sh`
+
+Monitors your MacBook’s battery level and notifies you with a macOS popup when it drops below **30%** (default).
+
+**Why this script?**  
+- macOS built-in alerts sometimes fail or are unreliable.
+- Useful for old batteries that might shut down at 20% or earlier.
+- Fully customizable threshold.
+
+**Usage:**
 ```bash
-chmod +x break_timer.sh
-./break_timer.sh 0 5 0  # 5-minute timer
+chmod +x scripts/battery_alert.sh
+./scripts/battery_alert.sh
 ```
-- Takes **hours, minutes, and seconds** as arguments.  
-- Displays a **live countdown** in the terminal.  
-- Notifies you with a **popup alert** when time is up.  
+
+---
+
+### ⏳ Break Timer – `break_timer.sh`
+
+A terminal-based countdown timer that notifies you with a popup when the time is up. Great for **pomodoros**, **rest breaks**, or **focused sprints**.
+
+**Usage:**
+```bash
+chmod +x scripts/break_timer.sh
+./scripts/break_timer.sh 0 25 0  # 25-minute session
+```
+Parameters: `hours minutes seconds`
+
+---
+
+### 🛠️ Homebrew Permissions Fix – `fix_homebrew_permissions.sh`
+
+Fixes common permission issues with Homebrew on macOS.
+
+**Usage:**
+```bash
+chmod +x scripts/fix_homebrew_permissions.sh
+./scripts/fix_homebrew_permissions.sh
+```
+
+---
+
+## 🧾 Cheat Sheet
+
+Want a quick summary of commands and what they do?  
+Check out [`cheatsheet/cheat-sheet.md`](cheatsheet/cheat-sheet.md)
 
 ---
 
 ## ⚙️ Requirements
+
 - macOS  
 - Bash  
-- AppleScript (built into macOS)  
+- AppleScript (pre-installed on macOS)
+
+---
 
 ## 📌 Notes
-- These scripts **only work on macOS**.  
-- You can modify them to suit your needs.  
+
+- These scripts are **macOS-specific**.
+- Feel free to edit and customize thresholds, styles, and logic.
+- Tested on macOS Monterey & Ventura.
+
+---
 
 ## 📜 License
-MIT License - Feel free to use and modify these scripts. 
+
+MIT License — Use, fork, and share freely 🚀
+```
