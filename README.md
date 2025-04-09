@@ -76,4 +76,3 @@ Check out [`cheatsheet/cheat-sheet.md`](cheatsheet/cheat-sheet.md)
 ## 📜 License
 
 MIT License — Use, fork, and share freely 🚀
-```
